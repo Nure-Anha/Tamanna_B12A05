@@ -32,48 +32,432 @@ document.getElementById('call_btn1').addEventListener('click', function(){
     // document.getElementById('total_coin').innerText = recentCoin ;
     // console.log(recentCoin) ;
     const tc = getInnertext('total_coin')
+
+    /**Call History--Object create and pushed in array portion */
+    // call history's object - name, number, date lagbe  
+    const hisObj = {
+        serviceName : 'National Emergency Number',
+        serviceNumber : '999' ,
+        time : new Date().toLocaleTimeString() 
+    }
+    callHistoryArr.push(hisObj) ; 
     
     if(tc >= 20){
-        alert("Calling to National Emergency Number  999")  ;
+        alert(`📞 Calling National Emergency 999...`)  ;
         remainsCoin('total_coin') ;
+
+        /******* Call History Coin wise portion */
+        const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
+        
+        historyID.innerHTML = ""
+
+        for(const i of callHistoryArr){
+            const createDivNew = document.createElement('div') ;
+            console.log(createDivNew) ;
+            createDivNew.innerHTML = `  <div class="w-[255px] h-[100px]  mt-[16px] bg-[#FAFAFA] shadow-md rounded-[10px] p-[2px]">
+                        <div class="flex gap-x-14.5">
+                            <div class="pt-[15px] ">
+                                <h1 class="font-bold text-[13px]">${i.serviceName}</h1>
+                                <p class="text-[#5c5c5c]">${i.serviceNumber}</p>
+                            </div>
+                                <p class="pt-[25px]">${i.time}</p>
+                        </div>
+                    </div> `
+
+            historyID.appendChild(createDivNew) ;
+        }
     }
     else{
-        alert('Cannot call insufficient coin') ;
+        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
+
+    
+    // // call history's object - name, number, date lagbe  
+    // const hisObj = {
+    //     serviceName : 'National Emergency Number',
+    //     serviceNumber : '999' ,
+    //     time : new Date().toLocaleTimeString() 
+    // }
+    // callHistoryArr.push(hisObj) ; 
+
    
 })
+
+
+
 document.getElementById('call_btn2').addEventListener('click', function(){
-    remainsCoin('total_coin')
-    alert("Calling to National Emergency Number  999")  ;
+    const tc = getInnertext('total_coin') ;
+
+    /**Call History--Object create and pushed in array portion */
+    // call history's object - name, number, date lagbe  
+    const hisObj = {
+        serviceName : 'Police Helpline Number',
+        serviceNumber : '999' ,
+        time : new Date().toLocaleTimeString() 
+    }
+    callHistoryArr.push(hisObj) ; 
+
+
+    if(tc >= 20){
+        alert(`📞 Calling Police 999...`)  ;
+        remainsCoin('total_coin') ;
+
+    /******* Call History Coin wise portion */
+        const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
+
+        historyID.innerHTML = ""
+
+        for(const i of callHistoryArr){
+            const createDivNew = document.createElement('div') ;
+            console.log(createDivNew) ;
+            createDivNew.innerHTML = `  <div class="w-[255px] h-[100px]  mt-[16px] bg-[#FAFAFA] shadow-md rounded-[10px] p-[2px]">
+                        <div class="flex gap-x-14.5">
+                            <div class="pt-[15px] ">
+                                <h1 class="font-bold text-[13px]">${i.serviceName}</h1>
+                                <p class="text-[#5c5c5c]">${i.serviceNumber}</p>
+                            </div>
+                                <p class="pt-[25px]">${i.time}</p>
+                        </div>
+                    </div> `
+
+            historyID.appendChild(createDivNew) ;
+        }
+
+    }
+    else{
+        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        return ;
+    }
+
+
+    
 })
+
+
 document.getElementById('call_btn3').addEventListener('click', function(){
-    remainsCoin('total_coin')
-    alert("Calling to National Emergency Number  999")  ;
+    const tc = getInnertext('total_coin') ;
+
+    /**Call History--Object create and pushed in array portion */
+    // call history's object - name, number, date lagbe  
+    const hisObj = {
+        serviceName : 'Fire Service Number',
+        serviceNumber : '999' ,
+        time : new Date().toLocaleTimeString() 
+    }
+    callHistoryArr.push(hisObj) ;
+    
+    if(tc >= 20){
+        alert(`📞 Calling Fire Service 999...`)  ;
+        remainsCoin('total_coin') ;
+
+        /******* Call History Coin wise portion */
+        const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
+
+        historyID.innerHTML = ""
+
+        for(const i of callHistoryArr){
+            const createDivNew = document.createElement('div') ;
+            console.log(createDivNew) ;
+            createDivNew.innerHTML = `  <div class="w-[255px] h-[100px]  mt-[16px] bg-[#FAFAFA] shadow-md rounded-[10px] p-[2px]">
+                        <div class="flex gap-x-14.5">
+                            <div class="pt-[15px] ">
+                                <h1 class="font-bold text-[13px]">${i.serviceName}</h1>
+                                <p class="text-[#5c5c5c]">${i.serviceNumber}</p>
+                            </div>
+                                <p class="pt-[25px]">${i.time}</p>
+                        </div>
+                    </div> `
+
+            historyID.appendChild(createDivNew) ;
+        }
+    }
+    else{
+        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        return ;
+    }
 })
+
+
+
 document.getElementById('call_btn4').addEventListener('click', function(){
-    remainsCoin('total_coin')
-    alert("Calling to National Emergency Number  999")  ;
+     const tc = getInnertext('total_coin') ;
+
+
+     /**Call History--Object create and pushed in array portion */
+     // call history's object - name, number, date lagbe  
+    const hisObj = {
+        serviceName : 'Ambulance Service',
+        serviceNumber : '1994-999999' ,
+        time : new Date().toLocaleTimeString() 
+    }
+    callHistoryArr.push(hisObj) ; 
+
+    if(tc >= 20){
+        alert(`📞 Calling Ambulance 1994-999999...`)   ;
+        remainsCoin('total_coin') ;
+
+        /******* Call History Coin wise portion */
+        const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
+
+        historyID.innerHTML = ""
+
+        for(const i of callHistoryArr){
+            const createDivNew = document.createElement('div') ;
+            console.log(createDivNew) ;
+            createDivNew.innerHTML = `  <div class="w-[255px] h-[100px]  mt-[16px] bg-[#FAFAFA] shadow-md rounded-[10px] p-[2px]">
+                        <div class="flex gap-x-14.5">
+                            <div class="pt-[15px] ">
+                                <h1 class="font-bold text-[13px]">${i.serviceName}</h1>
+                                <p class="text-[#5c5c5c]">${i.serviceNumber}</p>
+                            </div>
+                                <p class="pt-[25px]">${i.time}</p>
+                        </div>
+                    </div> `
+
+            historyID.appendChild(createDivNew) ;
+        }
+
+    }
+    else{
+        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        return ;
+    }
 })
+
+
 document.getElementById('call_btn5').addEventListener('click', function(){
-    remainsCoin('total_coin')
-    alert("Calling to National Emergency Number  999")  ;
+    const tc = getInnertext('total_coin') ;
+
+
+     /**Call History--Object create and pushed in array portion */
+    // call history's object - name, number, date lagbe  
+    const hisObj = {
+        serviceName : 'Women & Child Helpline',
+        serviceNumber : '109' ,
+        time : new Date().toLocaleTimeString() 
+    }
+    callHistoryArr.push(hisObj) ; 
+
+
+    if(tc >= 20){
+        alert(`📞 Calling Women & Child Helpline 109...`)  ;
+        remainsCoin('total_coin') ;
+
+        /******* Call History Coin wise portion */
+        const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
+
+        historyID.innerHTML = ""
+
+        for(const i of callHistoryArr){
+            const createDivNew = document.createElement('div') ;
+            console.log(createDivNew) ;
+            createDivNew.innerHTML = `  <div class="w-[255px] h-[100px]  mt-[16px] bg-[#FAFAFA] shadow-md rounded-[10px] p-[2px]">
+                        <div class="flex gap-x-14.5">
+                            <div class="pt-[15px] ">
+                                <h1 class="font-bold text-[13px]">${i.serviceName}</h1>
+                                <p class="text-[#5c5c5c]">${i.serviceNumber}</p>
+                            </div>
+                                <p class="pt-[25px]">${i.time}</p>
+                        </div>
+                    </div> `
+
+            historyID.appendChild(createDivNew) ;
+        }
+     }
+    else{
+        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        return ;
+    }
+
+
 })
+
+
+
 document.getElementById('call_btn6').addEventListener('click', function(){
-    remainsCoin('total_coin')
-    alert("Calling to National Emergency Number  999")  ;
+     const tc = getInnertext('total_coin') ;
+
+
+     /**Call History--Object create and pushed in array portion */
+    // call history's object - name, number, date lagbe  
+    const hisObj = {
+        serviceName : 'Anti-Corruption Helpline',
+        serviceNumber : '106' ,
+        time : new Date().toLocaleTimeString() 
+    }
+    callHistoryArr.push(hisObj) ; 
+
+
+    if(tc >= 20){
+        alert(`📞 Calling Anti-Corruption 106...`)  ;
+
+        /******* Call History Coin wise portion */
+        const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
+
+        historyID.innerHTML = ""
+
+        for(const i of callHistoryArr){
+            const createDivNew = document.createElement('div') ;
+            console.log(createDivNew) ;
+            createDivNew.innerHTML = `  <div class="w-[255px] h-[100px]  mt-[16px] bg-[#FAFAFA] shadow-md rounded-[10px] p-[2px]">
+                        <div class="flex gap-x-14.5">
+                            <div class="pt-[15px] ">
+                                <h1 class="font-bold text-[13px]">${i.serviceName}</h1>
+                                <p class="text-[#5c5c5c]">${i.serviceNumber}</p>
+                            </div>
+                                <p class="pt-[25px]">${i.time}</p>
+                        </div>
+                    </div> `
+
+            historyID.appendChild(createDivNew) ;
+        }
+
+     }
+    else{
+        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        return ;
+    }
+
 })
+
+
+
 document.getElementById('call_btn7').addEventListener('click', function(){
-    remainsCoin('total_coin')
-    alert("Calling to National Emergency Number  999")  ;
+     const tc = getInnertext('total_coin') ;
+
+
+     /**Call History--Object create and pushed in array portion */
+    // call history's object - name, number, date lagbe  
+    const hisObj = {
+        serviceName : 'Electricity Helpline',
+        serviceNumber : '16216' ,
+        time : new Date().toLocaleTimeString() 
+    }
+    callHistoryArr.push(hisObj) ; 
+
+     if(tc >= 20){
+       alert(`📞 Calling Electricity Outage 16216...`)  ;
+        remainsCoin('total_coin') ;
+
+        /******* Call History Coin wise portion */
+        const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
+
+        historyID.innerHTML = ""
+
+        for(const i of callHistoryArr){
+            const createDivNew = document.createElement('div') ;
+            console.log(createDivNew) ;
+            createDivNew.innerHTML = `  <div class="w-[255px] h-[100px]  mt-[16px] bg-[#FAFAFA] shadow-md rounded-[10px] p-[2px]">
+                        <div class="flex gap-x-14.5">
+                            <div class="pt-[15px] ">
+                                <h1 class="font-bold text-[13px]">${i.serviceName}</h1>
+                                <p class="text-[#5c5c5c]">${i.serviceNumber}</p>
+                            </div>
+                                <p class="pt-[25px]">${i.time}</p>
+                        </div>
+                    </div> `
+
+            historyID.appendChild(createDivNew) ;
+        }
+     }
+    else{
+        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        return ;
+    }
 })
+
+
+
 document.getElementById('call_btn8').addEventListener('click', function(){
-    remainsCoin('total_coin')
-    alert("Calling to National Emergency Number  999")  ;
+    const tc = getInnertext('total_coin') ;
+
+
+     /**Call History--Object create and pushed in array portion */
+    // call history's object - name, number, date lagbe  
+    const hisObj = {
+        serviceName : 'Brac Helpline',
+        serviceNumber : '16445' ,
+        time : new Date().toLocaleTimeString() 
+    }
+    callHistoryArr.push(hisObj) ; 
+
+    if(tc >= 20){
+        alert(`📞 Calling Brac 16445...`)  ;
+        remainsCoin('total_coin') ;
+
+        /******* Call History Coin wise portion */
+         const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
+
+        historyID.innerHTML = ""
+
+        for(const i of callHistoryArr){
+            const createDivNew = document.createElement('div') ;
+            console.log(createDivNew) ;
+            createDivNew.innerHTML = `  <div class="w-[255px] h-[100px]  mt-[16px] bg-[#FAFAFA] shadow-md rounded-[10px] p-[2px]">
+                        <div class="flex gap-x-14.5">
+                            <div class="pt-[15px] ">
+                                <h1 class="font-bold text-[13px]">${i.serviceName}</h1>
+                                <p class="text-[#5c5c5c]">${i.serviceNumber}</p>
+                            </div>
+                                <p class="pt-[25px]">${i.time}</p>
+                        </div>
+                    </div> `
+
+            historyID.appendChild(createDivNew) ;
+        }
+    
+    }
+    else{
+        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        return ;
+    }
 })
+
+
+
 document.getElementById('call_btn9').addEventListener('click', function(){
-    remainsCoin('total_coin')
-    alert("Calling to National Emergency Number  999")  ;
+    const tc = getInnertext('total_coin') ;
+
+
+     /**Call History--Object create and pushed in array portion */
+    // call history's object - name, number, date lagbe  
+    const hisObj = {
+        serviceName : 'Bangladesh Railway Helpline',
+        serviceNumber : '163' ,
+        time : new Date().toLocaleTimeString() 
+    }
+    callHistoryArr.push(hisObj) ; 
+
+    if(tc >= 20){
+       alert(`📞 Calling Bangladesh Railway 163...`) ;
+        remainsCoin('total_coin') ;
+
+        /******* Call History Coin wise portion */
+         const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
+
+        historyID.innerHTML = ""
+
+        for(const i of callHistoryArr){
+            const createDivNew = document.createElement('div') ;
+            console.log(createDivNew) ;
+            createDivNew.innerHTML = `  <div class="w-[255px] h-[100px]  mt-[16px] bg-[#FAFAFA] shadow-md rounded-[10px] p-[2px]">
+                        <div class="flex gap-x-14.5">
+                            <div class="pt-[15px] ">
+                                <h1 class="font-bold text-[13px]">${i.serviceName}</h1>
+                                <p class="text-[#5c5c5c]">${i.serviceNumber}</p>
+                            </div>
+                                <p class="pt-[25px]">${i.time}</p>
+                        </div>
+                    </div> `
+
+            historyID.appendChild(createDivNew) ;
+        }
+     }
+    else{
+        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        return ;
+    }
 })
 
 
@@ -129,7 +513,7 @@ document.getElementById('heart_9').addEventListener('click', function(){
 
 
 
-/******************************* COPY Function**********  */
+/******************************* COPY COUNT Function**********  */
 
 function copyCount (id){
     const getId = document.getElementById(id) ;  //total_copy id boshbe
@@ -139,7 +523,7 @@ function copyCount (id){
     return recentCopy ;
 }
 
-/************************** Number Copy *********************/
+/************************** Number Copy FUNCTION *********************/
 
 function numCopy (id){
     const numToCpy = document.getElementById(id).innerText ;  // 999 ashse
@@ -158,7 +542,7 @@ function numCopy (id){
 
 
 
-/**************************** COPY_Number and Copy_Count call *********************/
+/**************************** Number_COPY and Copy_Count call *********************/
 
 document.getElementById('cpy_btn1').addEventListener('click', function(){
     alert('National Emergency Number is Copied') ;
@@ -214,3 +598,28 @@ document.getElementById('cpy_btn9').addEventListener('click', function(){
     numCopy('cpy_num9') ;
     
 })
+
+
+
+
+
+                                    //**************************** CALL HISTORY *************************** */
+
+const callHistoryArr = [] ;       //9 ta item er object input hishebe ashbe
+ // now have to declare object in each card which i will push to this array 
+
+
+ /*******Clear Buttn */
+
+ document.getElementById('clr_btn').addEventListener('click', function(){
+    let removeHistory = callHistoryArr;
+    removeHistory = [] ;
+    console.log(removeHistory) ;
+
+    const rem_his = document.getElementById('call_history') ;
+    rem_his.innerHTML = "" ;
+
+
+ })
+
+
