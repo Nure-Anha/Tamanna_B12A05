@@ -32,19 +32,21 @@ document.getElementById('call_btn1').addEventListener('click', function(){
     // document.getElementById('total_coin').innerText = recentCoin ;
     // console.log(recentCoin) ;
     const tc = getInnertext('total_coin')
-
-    /**Call History--Object create and pushed in array portion */
-    // call history's object - name, number, date lagbe  
-    const hisObj = {
-        serviceName : 'National Emergency Number',
-        serviceNumber : '999' ,
-        time : new Date().toLocaleTimeString() 
-    }
-    callHistoryArr.push(hisObj) ; 
     
     if(tc >= 20){
-        alert(`📞 Calling National Emergency 999...`)  ;
+        alert('📞 Calling National Emergency 999...')  ;
         remainsCoin('total_coin') ;
+
+
+        
+        /**Call History--Object create and pushed in array portion */
+        // call history's object - name, number, date lagbe  
+        const hisObj = {
+            serviceName : 'National Emergency Number',
+            serviceNumber : '999' ,
+            time : new Date().toLocaleTimeString() 
+        }
+        callHistoryArr.push(hisObj) ; 
 
         /******* Call History Coin wise portion */
         const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
@@ -66,9 +68,10 @@ document.getElementById('call_btn1').addEventListener('click', function(){
 
             historyID.appendChild(createDivNew) ;
         }
+
     }
     else{
-        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        alert('❌ You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
 
@@ -87,21 +90,23 @@ document.getElementById('call_btn1').addEventListener('click', function(){
 
 
 document.getElementById('call_btn2').addEventListener('click', function(){
-    const tc = getInnertext('total_coin') ;
-
-    /**Call History--Object create and pushed in array portion */
-    // call history's object - name, number, date lagbe  
-    const hisObj = {
-        serviceName : 'Police Helpline Number',
-        serviceNumber : '999' ,
-        time : new Date().toLocaleTimeString() 
-    }
-    callHistoryArr.push(hisObj) ; 
+    const tc = getInnertext('total_coin') ; 
 
 
     if(tc >= 20){
-        alert(`📞 Calling Police 999...`)  ;
+        alert('📞 Calling Police 999...')  ;
         remainsCoin('total_coin') ;
+
+
+
+        /**Call History--Object create and pushed in array portion */
+        // call history's object - name, number, date lagbe  
+        const hisObj = {
+            serviceName : 'Police Helpline Number',
+            serviceNumber : '999' ,
+            time : new Date().toLocaleTimeString() 
+        }
+        callHistoryArr.push(hisObj) ;
 
     /******* Call History Coin wise portion */
         const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
@@ -126,7 +131,7 @@ document.getElementById('call_btn2').addEventListener('click', function(){
 
     }
     else{
-        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        alert('❌ You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
 
@@ -138,6 +143,12 @@ document.getElementById('call_btn2').addEventListener('click', function(){
 document.getElementById('call_btn3').addEventListener('click', function(){
     const tc = getInnertext('total_coin') ;
 
+    
+    if(tc >= 20){
+        alert('📞 Calling Fire Service 999...')  ;
+        remainsCoin('total_coin') ;
+
+        
     /**Call History--Object create and pushed in array portion */
     // call history's object - name, number, date lagbe  
     const hisObj = {
@@ -146,10 +157,6 @@ document.getElementById('call_btn3').addEventListener('click', function(){
         time : new Date().toLocaleTimeString() 
     }
     callHistoryArr.push(hisObj) ;
-    
-    if(tc >= 20){
-        alert(`📞 Calling Fire Service 999...`)  ;
-        remainsCoin('total_coin') ;
 
         /******* Call History Coin wise portion */
         const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
@@ -173,7 +180,7 @@ document.getElementById('call_btn3').addEventListener('click', function(){
         }
     }
     else{
-        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        alert('❌ You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
 })
@@ -184,6 +191,13 @@ document.getElementById('call_btn4').addEventListener('click', function(){
      const tc = getInnertext('total_coin') ;
 
 
+    if(tc >= 20){
+        alert('📞 Calling Ambulance 1994-999999...')   ;
+        remainsCoin('total_coin') ;
+
+
+
+        
      /**Call History--Object create and pushed in array portion */
      // call history's object - name, number, date lagbe  
     const hisObj = {
@@ -192,10 +206,6 @@ document.getElementById('call_btn4').addEventListener('click', function(){
         time : new Date().toLocaleTimeString() 
     }
     callHistoryArr.push(hisObj) ; 
-
-    if(tc >= 20){
-        alert(`📞 Calling Ambulance 1994-999999...`)   ;
-        remainsCoin('total_coin') ;
 
         /******* Call History Coin wise portion */
         const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
@@ -220,7 +230,7 @@ document.getElementById('call_btn4').addEventListener('click', function(){
 
     }
     else{
-        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        alert('❌ You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
 })
@@ -230,6 +240,13 @@ document.getElementById('call_btn5').addEventListener('click', function(){
     const tc = getInnertext('total_coin') ;
 
 
+    if(tc >= 20){
+        alert('📞 Calling Women & Child Helpline 109...')  ;
+        remainsCoin('total_coin') ;
+
+
+        
+
      /**Call History--Object create and pushed in array portion */
     // call history's object - name, number, date lagbe  
     const hisObj = {
@@ -238,11 +255,6 @@ document.getElementById('call_btn5').addEventListener('click', function(){
         time : new Date().toLocaleTimeString() 
     }
     callHistoryArr.push(hisObj) ; 
-
-
-    if(tc >= 20){
-        alert(`📞 Calling Women & Child Helpline 109...`)  ;
-        remainsCoin('total_coin') ;
 
         /******* Call History Coin wise portion */
         const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
@@ -266,7 +278,7 @@ document.getElementById('call_btn5').addEventListener('click', function(){
         }
      }
     else{
-        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        alert('❌ You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
 
@@ -279,6 +291,14 @@ document.getElementById('call_btn6').addEventListener('click', function(){
      const tc = getInnertext('total_coin') ;
 
 
+    if(tc >= 20){
+        alert('📞 Calling Anti-Corruption 106...')  ;
+        remainsCoin('total_coin') ;
+
+
+
+        
+
      /**Call History--Object create and pushed in array portion */
     // call history's object - name, number, date lagbe  
     const hisObj = {
@@ -287,10 +307,6 @@ document.getElementById('call_btn6').addEventListener('click', function(){
         time : new Date().toLocaleTimeString() 
     }
     callHistoryArr.push(hisObj) ; 
-
-
-    if(tc >= 20){
-        alert(`📞 Calling Anti-Corruption 106...`)  ;
 
         /******* Call History Coin wise portion */
         const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
@@ -315,7 +331,7 @@ document.getElementById('call_btn6').addEventListener('click', function(){
 
      }
     else{
-        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        alert('❌ You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
 
@@ -327,6 +343,14 @@ document.getElementById('call_btn7').addEventListener('click', function(){
      const tc = getInnertext('total_coin') ;
 
 
+     if(tc >= 20){
+       alert('📞 Calling Electricity Outage 16216...')  ;
+        remainsCoin('total_coin') ;
+
+
+
+        
+
      /**Call History--Object create and pushed in array portion */
     // call history's object - name, number, date lagbe  
     const hisObj = {
@@ -335,10 +359,6 @@ document.getElementById('call_btn7').addEventListener('click', function(){
         time : new Date().toLocaleTimeString() 
     }
     callHistoryArr.push(hisObj) ; 
-
-     if(tc >= 20){
-       alert(`📞 Calling Electricity Outage 16216...`)  ;
-        remainsCoin('total_coin') ;
 
         /******* Call History Coin wise portion */
         const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
@@ -362,7 +382,7 @@ document.getElementById('call_btn7').addEventListener('click', function(){
         }
      }
     else{
-        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        alert('❌ You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
 })
@@ -373,6 +393,14 @@ document.getElementById('call_btn8').addEventListener('click', function(){
     const tc = getInnertext('total_coin') ;
 
 
+
+    if(tc >= 20){
+        alert('📞 Calling Brac 16445...')  ;
+        remainsCoin('total_coin') ;
+
+
+
+        
      /**Call History--Object create and pushed in array portion */
     // call history's object - name, number, date lagbe  
     const hisObj = {
@@ -381,10 +409,6 @@ document.getElementById('call_btn8').addEventListener('click', function(){
         time : new Date().toLocaleTimeString() 
     }
     callHistoryArr.push(hisObj) ; 
-
-    if(tc >= 20){
-        alert(`📞 Calling Brac 16445...`)  ;
-        remainsCoin('total_coin') ;
 
         /******* Call History Coin wise portion */
          const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
@@ -409,7 +433,7 @@ document.getElementById('call_btn8').addEventListener('click', function(){
     
     }
     else{
-        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        alert('❌ You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
 })
@@ -420,6 +444,13 @@ document.getElementById('call_btn9').addEventListener('click', function(){
     const tc = getInnertext('total_coin') ;
 
 
+    if(tc >= 20){
+       alert('📞 Calling Bangladesh Railway 163...') ;
+        remainsCoin('total_coin') ;
+
+
+        
+
      /**Call History--Object create and pushed in array portion */
     // call history's object - name, number, date lagbe  
     const hisObj = {
@@ -428,10 +459,6 @@ document.getElementById('call_btn9').addEventListener('click', function(){
         time : new Date().toLocaleTimeString() 
     }
     callHistoryArr.push(hisObj) ; 
-
-    if(tc >= 20){
-       alert(`📞 Calling Bangladesh Railway 163...`) ;
-        remainsCoin('total_coin') ;
 
         /******* Call History Coin wise portion */
          const historyID = document.getElementById('call_history') ;  //parent --> new div ta etate rakhbo
@@ -455,7 +482,7 @@ document.getElementById('call_btn9').addEventListener('click', function(){
         }
      }
     else{
-        alert('You do not have sufficient coins! You need at least 20 coins to make a call.') ;
+        alert('❌ You do not have sufficient coins! You need at least 20 coins to make a call.') ;
         return ;
     }
 })
