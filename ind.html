@@ -1,0 +1,17 @@
+<div class="card">
+  <h3>National Emergency Number</h3>
+
+  <!-- put the number inside an input so it can be selected easily -->
+  <input type="text" id="number_1" value="999" readonly>
+
+  <button onclick="copyNumber('number_1')">Copy</button>
+</div>
+
+<script>
+function copyNumber(elementId) {
+    const input = document.getElementById(elementId);
+    input.select();                 // select the text
+    document.execCommand("copy");   // copy the selected text
+    alert("Copied: " + input.value);
+}
+</script>
